@@ -47,6 +47,7 @@ WORKDIR /opt/filecoin
 
 ### make configurable filecoin-ffi build
 ARG FFI_BUILD_FROM_SOURCE=0
+ENV FFI_BUILD_FROM_SOURCE=${FFI_BUILD_FROM_SOURCE}
 
 RUN make debug
 
