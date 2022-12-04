@@ -19,10 +19,10 @@ import (
 const BootstrappersFile = ""
 const GenesisFile = ""
 
-var NetworkBundle = "devnet"
+var NetworkBundle = "testing-fake-proofs"
 var BundleOverrides map[actorstypes.Version]string
 
-const GenesisNetworkVersion = network.Version18
+const GenesisNetworkVersion = network.Version16
 
 var UpgradeBreezeHeight = abi.ChainEpoch(-1)
 
@@ -65,6 +65,7 @@ var DrandSchedule = map[abi.ChainEpoch]DrandEnum{
 var SupportedProofTypes = []abi.RegisteredSealProof{
 	abi.RegisteredSealProof_StackedDrg2KiBV1,
 	abi.RegisteredSealProof_StackedDrg8MiBV1,
+	abi.RegisteredSealProof_StackedDrg32GiBV1,
 }
 var ConsensusMinerMinPower = abi.NewStoragePower(2048)
 var MinVerifiedDealSize = abi.NewStoragePower(256)
